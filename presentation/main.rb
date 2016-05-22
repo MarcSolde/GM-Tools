@@ -1,5 +1,6 @@
-require_relative './data/file_reader'
-require_relative './domain/UseCaseController/roller_ctrl'
+require_relative '../data/file_reader'
+require_relative '../data/treasure_gen'
+require_relative '../domain/UseCaseController/roller_ctrl'
 
 class Main
   puts "Select your option"
@@ -15,7 +16,6 @@ class Main
     when "2"
       puts FileReader::RandWord()
     when "3"
-      puts "monis"
+      puts TresaureGen.genMinorGem()
   end
-
 end
