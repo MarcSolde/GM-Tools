@@ -1,7 +1,7 @@
-require_relative '../data/file_reader'
 require_relative '../data/treasure_gen'
 require_relative '../domain/UseCaseController/CtrlRoller'
 require_relative '../domain/UseCaseController/CtrlNameGen'
+require_relative '../domain/UseCaseController/CtrlTreasureGen'
 
 class Main
   puts "Select your option"
@@ -18,7 +18,8 @@ class Main
       uc = CtrlNameGen.new()
       uc.generateName()
     when "3"
-      puts TresaureGen.genMinorGem()
+      uc = CtrlTreasureGen.new()
+      uc.generateTresaure
     else
       puts "Error"
   end
