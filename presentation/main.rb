@@ -17,5 +17,7 @@ class Main
       puts FileReader::RandWord()
     when "3"
       puts TresaureGen.genMinorGem()
+    else
+      puts "Error"
   end
 end
