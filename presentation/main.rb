@@ -1,6 +1,6 @@
 require_relative '../data/file_reader'
 require_relative '../data/treasure_gen'
-require_relative '../domain/UseCaseController/roller_ctrl'
+require_relative '../domain/UseCaseController/CtrlRoller'
 require_relative '../domain/UseCaseController/CtrlNameGen'
 
 class Main
@@ -12,7 +12,7 @@ class Main
   case option
     when "1"
       puts "Set XdY+-Z"
-      uc = RollerCtrl.new(gets.chomp)
+      uc = CtrlRoller.new(gets.chomp)
       uc.dieRoller()
     when "2"
       uc = CtrlNameGen.new()
