@@ -1,6 +1,8 @@
 require_relative '../domain/UseCaseController/CtrlRoller'
 require_relative '../domain/UseCaseController/CtrlNameGen'
 require_relative '../domain/UseCaseController/CtrlTreasureGen'
+require 'rubygems'
+require 'data_mapper'
 
 class Main
   puts "Select your option"

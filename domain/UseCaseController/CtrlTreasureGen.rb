@@ -1,5 +1,6 @@
 require_relative '../../data/treasure_gen'
 
+
 class CtrlTreasureGen
     def initialize()
     end
@@ -16,4 +17,6 @@ Code for XP to gen and shit like that
 2.- Calculate, from bigger to smaller treasure, which rolls will be made
 3.- Roll for normal or special loot, for each treasure
 4.- Output the result
+DataMapper.setup(:default, 'postgres://user:password@hostname/database')
+
 =end
