@@ -9,3 +9,11 @@ class CtrlTreasureGen
         puts TreasureGen::genMinorGem()
     end
 end
+
+=begin
+Code for XP to gen and shit like that
+1.- Introduce XP value earnt by the adventure/PCs
+2.- Calculate, from bigger to smaller treasure, which rolls will be made
+3.- Roll for normal or special loot, for each treasure
+4.- Output the result
+=end
