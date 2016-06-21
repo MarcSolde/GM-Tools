@@ -6,8 +6,10 @@ require 'rubygems'
 require 'data_mapper'
 
 class Main
+  #if select de la bd = nil
   db = SetUpDB.new()
   db.names()
+  #end
   puts "Select your option"
   puts "1.- Die roller"
   puts "2.- Name Generator (10 names)"
