@@ -1,0 +1,4 @@
+1 Gem or jewelry worth 1d100 gp
+2 Gem or jewelry worth 1d6x200 gp
+3 Gem or jewelry worth 1d6x300 gp
+4 Gem or jewelry worth 1d100x100 gp

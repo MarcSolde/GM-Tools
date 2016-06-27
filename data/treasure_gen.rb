@@ -23,4 +23,22 @@ module TresaureGen
       return "Gem or jewelry worth "+die.to_s+" gp"
     end
   end
+
+  def self.genMediumGem
+    puts" "
+    puts"---Medium gems and Jewelery"
+    result = File.readlines("./data/tableGemMedium.txt").sample
+    result2 = result.lines("1d")
+    var = result2[1].lines("x") #var = [Y, x...]
+    if var[1]
+      die = DieRoller::roll("1d"+var[0])
+      var2= var[1].lines(" ")
+      ret = die.to_i*var2[0].to_i
+    else
+      var = result2[1].lines(" ")
+      ret = DieRoller::roll("1d"+var[0])
+    end
+    return "Gem or jewelery worth "+ret.to_s+" gp"
+
+  end
 end
