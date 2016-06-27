@@ -6,4 +6,10 @@ module FileReader
     surname = words[rand(0..words.size - 1)] until surname.to_s.size > 1
     return name+" "+surname
   end
+  
+  def self.readAllValues
+    file = File.read("./data/names.txt")
+    words = file.split(" ")
+    return words
+  end
 end

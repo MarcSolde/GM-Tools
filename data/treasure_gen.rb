@@ -1,6 +1,6 @@
 require_relative("../domain/Model/die_roller")
 
-module TresaureGen
+module TreasureGen
   def self.genMinorGem
     puts "---Minor gems and Jewelry---"
     result =  File.readlines("./data/tableGemMinor.txt").sample

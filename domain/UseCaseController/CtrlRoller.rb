@@ -1,10 +1,10 @@
 require_relative '../Model/die_roller'
 
-class RollerCtrl
+class CtrlRoller
   def initialize(die)
     @die = die
   end
-  def UC
+  def dieRoller
     print "Die roll result: #{DieRoller::roll(@die)}"
   end
 end
