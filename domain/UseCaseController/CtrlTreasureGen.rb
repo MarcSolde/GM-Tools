@@ -7,8 +7,9 @@ class CtrlTreasureGen
     def generateTresaure()
         #Ask for info about which kind of treasure the user wants to generate
         #Right now we only have the minor gem generator
-        puts TreasureGen::genMinorGem()
-        puts TreasureGen::genMediumGem()
+        puts "Gem or jewelry worth "+TreasureGen::genGem("Minor").to_s+" gp"
+        puts "Gem or jewelry worth "+TreasureGen::genGem("Medium").to_s+" gp"
+        #puts TreasureGen::genMediumGem()
     end
 end
 

@@ -25,13 +25,12 @@ module TreasureGen
     end
   end
 =end
-  def self.genMinorGem
-    puts "---Minor gems and Jewelry---"
-    result =  File.readlines("./data/tableGemMinor.txt").sample
+  def self.genGem(s)
+    puts "---"+s+" gems and Jewelry---"
+    result = File.readlines("./data/tableGemMinor.txt").sample if s=="Minor"
+    result = File.readlines("./data/tableGemMedium.txt").sample if s=="Medium"
     result1 = result.match /(\d+)d(\d+)([+|x])?(\d+)?/
     die = DieRoller::roll(result1[1]+"d"+result1[2]).to_i
-    puts result
-    puts die
     if (result1.size > 3) 
       if (result1[3] == "x")
         die *= result1[4].to_i
@@ -40,23 +39,5 @@ module TreasureGen
       end
     end
     return die
-  end
-
-  def self.genMediumGem
-    puts" "
-    puts"---Medium gems and Jewelery"
-    result = File.readlines("./data/tableGemMedium.txt").sample
-    result2 = result.lines("1d")
-    var = result2[1].lines("x") #var = [Y, x...]
-    if var[1]
-      die = DieRoller::roll("1d"+var[0])
-      var2= var[1].lines(" ")
-      ret = die.to_i*var2[0].to_i
-    else
-      var = result2[1].lines(" ")
-      ret = DieRoller::roll("1d"+var[0])
-    end
-    return "Gem or jewelery worth "+ret.to_s+" gp"
-
   end
 end
