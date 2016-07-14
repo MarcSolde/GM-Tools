@@ -5,6 +5,6 @@ class CtrlRoller
     @die = die
   end
   def dieRoller
-    print "Die roll result: #{DieRoller::roll(@die)}"
+    print "Die roll result: #{DieRoller::roll(@die)}\n"
   end
 end
