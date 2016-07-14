@@ -1,6 +1,7 @@
 require_relative("../domain/Model/die_roller")
 
 module TreasureGen
+=begin
   def self.genMinorGem
     puts "---Minor gems and Jewelry---"
     result =  File.readlines("./data/tableGemMinor.txt").sample
@@ -22,6 +23,23 @@ module TreasureGen
       die = DieRoller::roll("1d6")
       return "Gem or jewelry worth "+die.to_s+" gp"
     end
+  end
+=end
+  def self.genMinorGem
+    puts "---Minor gems and Jewelry---"
+    result =  File.readlines("./data/tableGemMinor.txt").sample
+    result1 = result.match /(\d+)d(\d+)([+|x])?(\d+)?/
+    die = DieRoller::roll(result1[1]+"d"+result1[2]).to_i
+    puts result
+    puts die
+    if (result1.size > 3) 
+      if (result1[3] == "x")
+        die *= result1[4].to_i
+      else
+        die += result1[4].to_i
+      end
+    end
+    return die
   end
 
   def self.genMediumGem
