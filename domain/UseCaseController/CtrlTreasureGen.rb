@@ -1,4 +1,4 @@
-require_relative '../../data/treasure_gen'
+require_relative '../Model/treasure_gen'
 
 
 class CtrlTreasureGen
