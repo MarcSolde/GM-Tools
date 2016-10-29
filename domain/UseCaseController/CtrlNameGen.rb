@@ -1,4 +1,4 @@
-require_relative "../../data/file_reader"
+require_relative "../Model/file_reader.rb"
 
 class CtrlNameGen 
     def initialize()

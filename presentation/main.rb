@@ -1,15 +1,9 @@
 require_relative '../domain/UseCaseController/CtrlRoller'
 require_relative '../domain/UseCaseController/CtrlNameGen'
 require_relative '../domain/UseCaseController/CtrlTreasureGen'
-require_relative '../domain/Model/setUpDB'
 require 'rubygems'
-require 'data_mapper'
 
 class Main
-  #if select de la bd = nil
-  db = SetUpDB.new()
-  db.names()
-  #end
   puts "Select your option"
   puts "1.- Die roller"
   puts "2.- Name Generator (10 names)"
